@@ -1,0 +1,1 @@
+# Colors, the color component

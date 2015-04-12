@@ -1,0 +1,22 @@
+{
+  "name": "colors",
+  "version": "1.0.0",
+  "description": "React component to show RGB colors",
+  "main": "./js/index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eduardo Rabelo <oieduardorabelo@gmail.com> (http://github.com/oieduardorabelo)",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^0.13.1"
+  },
+  "devDependencies": {
+    "babel-core": "^5.0.12",
+    "babel-loader": "^5.0.0",
+    "react-hot-loader": "^1.2.4",
+    "webpack": "^1.8.4",
+    "webpack-dev-server": "^1.8.0"
+  }
+}
