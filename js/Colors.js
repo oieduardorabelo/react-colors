@@ -2,15 +2,19 @@
 
 import React from 'react'
 import ColorSlider from './ColorSlider'
+import LabelColorToHex from './ColorToHex'
+import LabelColorToRgb from './ColorToRgb'
+import ColorPalette from './ColorPalette'
 
 class Colors extends React.Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props)
+
     this.state = {
-      red: 50,
-      green: 50,
-      blue: 50
+      red: this.props.initialValue,
+      green: this.props.initialValue,
+      blue: this.props.initialValue
     }
   }
 
@@ -23,28 +27,16 @@ class Colors extends React.Component {
   }
 
   render() {
-    var bgMix = {
-      backgroundColor: `rgb(${this.state.red} ,${this.state.green} ,${this.state.blue})`
-    }
-    var bgR = {
-      backgroundColor: `rgb(${this.state.red} ,0,0)`
-    }
-    var bgG = {
-      backgroundColor: `rgb(0,${this.state.green} ,0)`
-    }
-    var bgB = {
-      backgroundColor: `rgb(0,0,${this.state.blue})`
-    }
     return (
       <div>
         <ColorSlider ref="red" initialValue={this.state.red} update={this.update.bind(this)} />
         <ColorSlider ref="green" initialValue={this.state.green} update={this.update.bind(this)} />
         <ColorSlider ref="blue" initialValue={this.state.blue} update={this.update.bind(this)} />
 
-        <div className="bg bg-mix" style={bgMix}></div>
-        <div className="bg bg-parts bg-r" style={bgR}></div>
-        <div className="bg bg-parts bg-g" style={bgG}></div>
-        <div className="bg bg-parts bg-b" style={bgB}></div>
+        <LabelColorToRgb red={this.state.red} green={this.state.green} blue={this.state.blue} />
+        <LabelColorToHex red={this.state.red} green={this.state.green} blue={this.state.blue} />
+
+        <ColorPalette red={this.state.red} green={this.state.green} blue={this.state.blue} />
       </div>
     )
   }
