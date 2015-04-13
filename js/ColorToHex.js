@@ -8,7 +8,7 @@ class ColorToHex extends React.Component {
   }
 
   componentToHex(c) {
-      var hex = Number(c).toString(16);
+      let hex = Number(c).toString(16);
       return hex.length === 1 ? '0' + hex : hex;
   }
 

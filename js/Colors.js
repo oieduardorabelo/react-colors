@@ -4,7 +4,7 @@ import React from 'react'
 import ColorSlider from './ColorSlider'
 import LabelColorToHex from './ColorToHex'
 import LabelColorToRgb from './ColorToRgb'
-import ColorPalette from './ColorPalette'
+import ShowColors from './ShowColors'
 
 class Colors extends React.Component {
 
@@ -36,7 +36,7 @@ class Colors extends React.Component {
         <LabelColorToRgb red={this.state.red} green={this.state.green} blue={this.state.blue} />
         <LabelColorToHex red={this.state.red} green={this.state.green} blue={this.state.blue} />
 
-        <ColorPalette red={this.state.red} green={this.state.green} blue={this.state.blue} />
+        <ShowColors red={this.state.red} green={this.state.green} blue={this.state.blue} />
       </div>
     )
   }

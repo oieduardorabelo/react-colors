@@ -2,7 +2,7 @@
 
 import React from 'react'
 
-class ColorToRgb extends React.Component {
+class ShowColors extends React.Component {
   constructor(props) {
     super(props)
   }
@@ -51,4 +51,4 @@ class ColorToRgb extends React.Component {
   }
 }
 
-export default ColorToRgb
+export default ShowColors
