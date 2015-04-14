@@ -1,6 +1,6 @@
 {
   "name": "colors",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "React component to show RGB colors",
   "main": "./js/index.js",
   "scripts": {
